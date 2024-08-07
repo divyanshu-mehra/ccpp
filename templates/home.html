@@ -1,0 +1,158 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link rel="stylesheet" href="css">
+    <style>
+        *{
+            overflow-x: hidden;
+            color: black;
+        }  
+
+        @font-face {
+            font-family: 'Gerbil';
+            src: url('Gerbil.otf');
+        }
+
+        #head{
+            position: relative;
+            color: black;
+            top: 8px;
+        }
+
+    body {     
+        }
+
+        .diagonal-line {
+            border-top: 3px solid black;
+            width: 300px;
+            position: absolute;
+            top: 37px;
+            left: 39%;
+        }
+        .diagonal-lineB {
+            border-top: 3px solid black;
+            width: 300px;
+            position: absolute;
+            top: 117px;
+            left: 39%;
+        }
+
+        form {
+            background: url("https://img.freepik.com/free-vector/realistic-credit-card-design_23-2149126094.jpg?t=st=1723016523~exp=1723020123~hmac=a72ef83abc408a99d65b9562dc7c685cd84e45cad0059842709a44422b1e63ae&w=740");
+            background-size: contain; 
+            width: 155%;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-family: 'Gerbil', 'sans-serif';
+            font-size: 3rem;
+        }
+
+        .backside {
+            padding: 11px 162px 0px 1px;
+            line-height: 2.5;
+            border: 4px solid rgba(255, 255, 255, .2);
+            background-color: transparent;
+            backdrop-filter: blur(12px);
+            width: 76%;
+            margin-left: 92px;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        form input[type="text"] {
+            left: 50%;
+            display: inline-flex;
+            flex-direction: column;
+        }
+        input {
+            position: relative;
+            left: 48%;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        .btn {
+            position: relative;
+            left: 51%;
+            padding: 4px;
+            width: 110px;
+            border-radius: 9%;
+            border: 3px solid #114d85;
+            font-size: 21px;
+            font-family: fangsong;
+            color: white;
+            background: #2991df;
+        }
+
+        #ptext {
+            position: relative;
+            left: 42%;
+            color: whitesmoke;
+            width: 313px;
+            height: 24px;
+            font-size: larger;
+            padding: 11px;
+            background: black;
+        } 
+    </style>
+ </head>
+ <body >
+    <div class="login">
+        <div class="diagonal-line"></div>
+        <h1 id="head"> Credit Card Fraud Prediction </h1>
+        <div class="diagonal-lineB"></div>
+
+        <div class="backside">
+            <!-- Main Input For Receiving Query to our ML -->
+            <form action="{{ url_for('predict') }}" method="post">
+                <input type="text" name="Time" placeholder="Time" required="required" /> Time <br>
+                <input type="text" name="V1" placeholder="V1" required="required" />V1 <br>
+                <input type="text" name="V2" placeholder="V2" required="required" />V2 <br>
+                <input type="text" name="V3" placeholder="V3" required="required" />V3 <br>
+                <input type="text" name="V4" placeholder="V4" required="required" />V4 <br>
+                <input type="text" name="V5" placeholder="V5" required="required" />V5 <br>
+                <input type="text" name="V6" placeholder="V6" required="required" />V6 <br>
+                <input type="text" name="V7" placeholder="V7" required="required" />V7 <br>
+                <input type="text" name="V8" placeholder="V8" required="required" />V8 <br>
+                <input type="text" name="V9" placeholder="V9" required="required" />V9 <br>
+                <input type="text" name="V10" placeholder="V10" required="required" />V10 <br>
+                <input type="text" name="V11" placeholder="V11" required="required" />V11 <br>
+                <input type="text" name="V12" placeholder="V12" required="required" />V12 <br>
+                <input type="text" name="V13" placeholder="V13" required="required" />V13 <br>
+                <input type="text" name="V14" placeholder="V14" required="required" />V14 <br>
+                <input type="text" name="V15" placeholder="V15" required="required" />V15 <br>
+                <input type="text" name="V16" placeholder="V16" required="required" />V16 <br>
+                <input type="text" name="V17" placeholder="V17" required="required" />V17 <br>
+                <input type="text" name="V18" placeholder="V18" required="required" />V18 <br>
+                <input type="text" name="V19" placeholder="V19" required="required" />V19 <br>
+                <input type="text" name="V20" placeholder="V20" required="required" />V20 <br>
+                <input type="text" name="V21" placeholder="V21" required="required" />V21 <br>
+                <input type="text" name="V22" placeholder="V22" required="required" />V22 <br>
+                <input type="text" name="V23" placeholder="V23" required="required" />V23 <br>
+                <input type="text" name="V24" placeholder="V24" required="required" />V24 <br>
+                <input type="text" name="V25" placeholder="V25" required="required" />V25 <br>
+                <input type="text" name="V26" placeholder="V26" required="required" />V26 <br>
+                <input type="text" name="V27" placeholder="V27" required="required" />V27 <br>
+                <input type="text" name="V28" placeholder="V28" required="required" />V28 <br>
+                <input type="text" name="Amount" placeholder="Amount" required="required" />Amount <br>
+                
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+        </div>
+        <br>
+        <br>
+    </div>
+    <p id="ptext">{{ prediction_text }}</p>
+ </body>
+</html>
+/*
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="mystyle.css">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+*/

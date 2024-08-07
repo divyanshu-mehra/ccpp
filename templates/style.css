@@ -1,0 +1,86 @@
+    * {
+        overflow-x: hidden;
+        color: white;
+        background-color: lightblue;
+    }  
+
+    @font-face {
+        font-family: 'Gerbil';
+        src: url('Gerbil.otf');
+    }
+
+    body {
+        {% comment %} background: url("https://img.freepik.com/free-vector/realistic-credit-card-design_23-2149126093.jpg?t=st=1722929878~exp=1722933478~hmac=1575dc3859dc03fe7ecaf1a569c95e8ce256cad35ed18cae447d409a0b10dca4&w=740");
+        background-size: contain; {% endcomment %}
+    }
+    .diagonal-line {
+        border-top: 3px solid black;
+        width: 300px;
+        position: absolute;
+        top: 37px;
+        left: 39%;
+    }
+    .diagonal-lineB {
+        border-top: 3px solid black;
+        width: 300px;
+        position: absolute;
+        top: 117px;
+        left: 39%;
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        font-family: 'Gerbil', 'sans-serif';
+        font-size: 3rem;
+    }
+
+    .backside {
+        padding: 11px 162px 0px 1px;
+        line-height: 2.5;
+        border: 4px solid rgba(255, 255, 255, .2);
+        background-color: transparent;
+        backdrop-filter: blur(12px);
+        width: 76%;
+        margin-left: 92px;
+        color: white;
+        font-size: 1.2rem;
+    }
+    form {
+        width: 155%;
+    }
+
+    form input[type="text"] {
+        left: 50%;
+        display: inline-flex;
+        flex-direction: column;
+    }
+    input {
+        position: relative;
+        left: 48%;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .btn {
+        position: relative;
+        left: 51%;
+        padding: 4px;
+        width: 110px;
+        border-radius: 9%;
+        border: 3px solid #114d85;
+        font-size: 21px;
+        font-family: fangsong;
+        color: white;
+        background: #2991df;
+    }
+
+#ptext {
+        position: relative;
+        left: 48%;
+        color: whitesmoke;
+        width: 136px;
+        height: 24px;
+        padding-top: 4px;
+        background: black;
+    }
